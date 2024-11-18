@@ -36,8 +36,8 @@ app.post("/mutant", (req, res) => {
   const data = readData();
   const body = req.body;
   console.log(body)
-  isMutantResult = isMutant(body);
-  res.json({ message: isMutantResult });
+  isMutantResult = isMutant(body.dna);
+  res.json({ isMutant: isMutantResult });
 });
 
 function isMutant(dna){
