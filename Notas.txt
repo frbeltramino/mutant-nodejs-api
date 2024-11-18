@@ -1,2 +1,0 @@
-Instalarse librería rest client en vs code para probar la api.
-Una vez instalada esa librería: se puede ejecutar la consulta al endpoint mutant con un arreglo que represente la matriz del adn del sujeto.

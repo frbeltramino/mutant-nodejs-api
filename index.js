@@ -37,7 +37,7 @@ app.post("/mutant", (req, res) => {
   const body = req.body;
   console.log(body)
   isMutantResult = isMutant(body);
-  res.json({ message: isMutantResult});
+  res.json({ message: isMutantResult });
 });
 
 function isMutant(dna){
@@ -48,14 +48,14 @@ function isMutant(dna){
   }
   var arrDna = createArrayDna(dna);
   var cantRepeatVertically = verifyVertically(arrDna);
-  console.log(cantRepeatVertically);
+  console.log("Verticales: " + cantRepeatVertically);
   var cantRepeatDiagonally = verifyDiagonally(arrDna);
-  console.log(cantRepeatDiagonally);
+  console.log("Diagonales: " + cantRepeatDiagonally);
   var cantRepeatHorizontally = verifyHorizontally(arrDna);
-  console.log(cantRepeatHorizontally);
+  console.log("Horizontales: " + cantRepeatHorizontally);
   isMutant = cantRepeatVertically + cantRepeatHorizontally + cantRepeatDiagonally > 1;
   console.log(isMutant);
-  //return isMutant;
+  return isMutant;
 };
 
 function createArrayDna(dna){
@@ -80,19 +80,6 @@ function verifyDiagonally(arrDna){
   posColInit = arrDna.length - 1;
   posRow = 0;
   var cantRepeatDiagonallyLeftToRight = findDiagonallyLeftToRight(arrDna);
-  //mientras no llegue al final de las columnas y filas
-  //tomo la primer letra - la selteo
-  //paso a la columna anterior // me guardo la columna incial
-  //tomo la segunda letra y la guardo
-  //sumo una fila y una columna - guardo la letra
-  //comparo
-  //sumo letras iguales
-  //vuelvo a la fila en 0
-  //resto uno a la columna inicial
-  //tomo la primer letra
-  //mientras no llegue al final de las columnas y filas
-  //sumo una columna y una fila
-  //tomo la segunda letra
   while(posCol <= arrDna.length - 1 && posRow <= arrDna.length - 1){
     if (posCol == arrDna[posRow].length - 1){//si ya estoy al final de la matriz
       posColInit = posColInit - 1;
