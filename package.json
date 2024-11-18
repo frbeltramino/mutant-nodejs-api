@@ -1,0 +1,30 @@
+{
+  "name": "mutant-nodejs-api",
+  "version": "1.0.0",
+  "description": "mutant dna api",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frbeltramino/mutant-nodejs-api.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "fedebeltra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frbeltramino/mutant-nodejs-api/issues"
+  },
+  "homepage": "https://github.com/frbeltramino/mutant-nodejs-api#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

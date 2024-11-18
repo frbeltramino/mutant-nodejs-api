@@ -1,0 +1,40 @@
+
+GET http://localhost:3000/dna HTTP/1.1
+###
+POST http://localhost:3000/books HTTP/1.1
+Content-Type: application/json
+{
+  "name": "Libro 3",
+  "author": "Stephen R Covey",
+  "year": 1989
+}
+###
+PUT http://localhost:3000/books/3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Libro 33",
+  "author": "Stephen R Covey 3 ",
+  "year": 1989
+}
+
+###
+DELETE http://localhost:3000/books/3 HTTP/1.1
+
+
+###
+GET http://localhost:3000/dna HTTP/1.1
+
+
+###
+POST http://localhost:3000/mutant HTTP/1.1
+Content-Type: application/json
+
+[
+  "ATGCGA",
+  "CAGTGA",
+  "CCAGGA",
+  "ATGAGA",
+  "CAGTGC",
+  "CCCCTA"
+]

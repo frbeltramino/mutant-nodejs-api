@@ -1,0 +1,1 @@
+Instalarse librería rest client en vs code para probar la api.
